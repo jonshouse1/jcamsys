@@ -1,0 +1,28 @@
+#!/bin/bash
+
+ARCH=`arch`
+DEST="jcamsys_xviewer"
+
+# the JCID defines who we are to the server, we want it be unique, but not unique
+# wth each new compile.
+if [ ! -f id.h ]; then
+	RANDOMID=`head -16 /dev/urandom | md5sum |cut -d' ' -f1`
+	echo "#define JCID  \"$RANDOMID\" " >id.h
+	echo "made id.h"
+fi
+
+if [ -f $DEST ]; then
+	rm $DEST
+fi
+
+
+
+#debug
+DEBUG='-g -O0'
+REL="../../../.."
+
+#Ad in -O3 later
+C="gcc -g -O0 -Wall jcamsysxviewer_form.c jcamsysxviewer.c $DEBUG $REL/jcamsys_common/jcamsys_images.c $REL/jcamsys_common/md5x.c $REL/jcamsys_common/jcamsys_network.c $REL/jcamsys_common/jcamsys_protocol.c $REL/jcamsys_common/jcamsys_cipher.c $REL/jcamsys_common/jcamsys_common.c $REL/jcamsys_common/jcamsys_client_settings.c -I$REL/jcamsys_common -lforms -lflimage -ljpeg -o jcamsysxviewer"
+echo $C
+$C
+

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+ARCH=`arch`
+DEST="jcamsysxviewert"
+
+
+#debug
+DEBUG='-g -O0'
+
+REL="../../../.."
+
+#Ad in -O3 later
+C="gcc -g -O0 -Wall jcamsysxviewert_form_main.c jcamsysxviewert_form_cameraview.c jcamsysxviewert_form_preview4.c jcamsysxviewert_form_preview9.c jcamsysxviewert_form_sensors.c jcamsysxviewert.c $DEBUG $REL/jcamsys_common/jcamsys_images.c $REL/jcamsys_common/md5x.c $REL/jcamsys_common/jcamsys_network.c $REL/jcamsys_common/jcamsys_protocol.c $REL/jcamsys_common/jcamsys_cipher.c $REL/jcamsys_common/jcamsys_common.c $REL/jcamsys_common/jcamsys_client_settings.c -I$REL/jcamsys_common -lforms -lflimage -ljpeg -o $DEST"
+echo $C
+$C
+

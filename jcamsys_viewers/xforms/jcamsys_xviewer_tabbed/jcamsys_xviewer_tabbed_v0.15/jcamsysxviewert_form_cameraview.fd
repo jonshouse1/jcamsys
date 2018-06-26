@@ -1,0 +1,323 @@
+Magic: 15000
+
+Internal Form Definition File
+    (do not change)
+
+Number of forms: 1
+Unit of measure: FL_COORD_PIXEL
+SnapGrid: 9
+
+=============== FORM ===============
+Name: cameraview
+Width: 645
+Height: 523
+Number of Objects: 17
+
+--------------------
+class: FL_BOX
+type: FL_FLAT_BOX
+box: 0 0 645 523
+boxtype: FL_NO_BOX
+colors: FL_DODGERBLUE FL_BLACK
+alignment: FL_ALIGN_CENTER
+style: FL_NORMAL_STYLE
+size: FL_DEFAULT_SIZE
+lcol: FL_BLACK
+label: 
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: 
+callback: 
+argument: 
+
+--------------------
+class: FL_BOX
+type: FL_UP_BOX
+box: 0 477 645 46
+boxtype: FL_NO_BOX
+colors: FL_BLACK FL_BLACK
+alignment: FL_ALIGN_CENTER
+style: FL_NORMAL_STYLE
+size: FL_DEFAULT_SIZE
+lcol: FL_BLACK
+label: 
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: 
+callback: 
+argument: 
+
+--------------------
+class: FL_BITMAP
+type: FL_NORMAL_BITMAP
+box: 0 0 639 486
+boxtype: FL_NO_BOX
+colors: FL_COL1 FL_COL1
+alignment: FL_ALIGN_BOTTOM
+style: FL_NORMAL_STYLE
+size: FL_DEFAULT_SIZE
+lcol: FL_BLACK
+label: 
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: largeviewcanvas
+callback: 
+argument: 
+
+--------------------
+class: FL_BUTTON
+type: FL_NORMAL_BUTTON
+box: 108 486 30 30
+boxtype: FL_FRAME_BOX
+colors: FL_BLACK FL_ALICEBLUE
+alignment: FL_ALIGN_CENTER
+style: FL_NORMAL_STYLE
+size: FL_LARGE_SIZE
+lcol: FL_BOTTOM_BCOL
+label: 1
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: bcam1
+callback: camchange
+argument: 1
+
+--------------------
+class: FL_BUTTON
+type: FL_NORMAL_BUTTON
+box: 153 486 30 30
+boxtype: FL_FRAME_BOX
+colors: FL_BLACK FL_ALICEBLUE
+alignment: FL_ALIGN_CENTER
+style: FL_NORMAL_STYLE
+size: FL_LARGE_SIZE
+lcol: FL_BOTTOM_BCOL
+label: 2
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: bcam2
+callback: camchange
+argument: 2
+
+--------------------
+class: FL_BUTTON
+type: FL_NORMAL_BUTTON
+box: 198 486 30 30
+boxtype: FL_FRAME_BOX
+colors: FL_BLACK FL_ALICEBLUE
+alignment: FL_ALIGN_CENTER
+style: FL_NORMAL_STYLE
+size: FL_LARGE_SIZE
+lcol: FL_BOTTOM_BCOL
+label: 3
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: bcam3
+callback: camchange
+argument: 3
+
+--------------------
+class: FL_BUTTON
+type: FL_NORMAL_BUTTON
+box: 243 486 30 30
+boxtype: FL_FRAME_BOX
+colors: FL_BLACK FL_ALICEBLUE
+alignment: FL_ALIGN_CENTER
+style: FL_NORMAL_STYLE
+size: FL_LARGE_SIZE
+lcol: FL_BOTTOM_BCOL
+label: 4
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: bcam4
+callback: camchange
+argument: 4
+
+--------------------
+class: FL_BUTTON
+type: FL_NORMAL_BUTTON
+box: 288 486 30 30
+boxtype: FL_FRAME_BOX
+colors: FL_BLACK FL_ALICEBLUE
+alignment: FL_ALIGN_CENTER
+style: FL_NORMAL_STYLE
+size: FL_LARGE_SIZE
+lcol: FL_BOTTOM_BCOL
+label: 5
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: bcam5
+callback: camchange
+argument: 5
+
+--------------------
+class: FL_BUTTON
+type: FL_NORMAL_BUTTON
+box: 333 486 30 30
+boxtype: FL_FRAME_BOX
+colors: FL_BLACK FL_ALICEBLUE
+alignment: FL_ALIGN_CENTER
+style: FL_NORMAL_STYLE
+size: FL_LARGE_SIZE
+lcol: FL_BOTTOM_BCOL
+label: 6
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: bcam6
+callback: camchange
+argument: 6
+
+--------------------
+class: FL_BUTTON
+type: FL_NORMAL_BUTTON
+box: 378 486 30 30
+boxtype: FL_FRAME_BOX
+colors: FL_BLACK FL_ALICEBLUE
+alignment: FL_ALIGN_CENTER
+style: FL_NORMAL_STYLE
+size: FL_LARGE_SIZE
+lcol: FL_BOTTOM_BCOL
+label: 7
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: bcam7
+callback: camchange
+argument: 7
+
+--------------------
+class: FL_BUTTON
+type: FL_NORMAL_BUTTON
+box: 423 486 30 30
+boxtype: FL_FRAME_BOX
+colors: FL_BLACK FL_ALICEBLUE
+alignment: FL_ALIGN_CENTER
+style: FL_NORMAL_STYLE
+size: FL_LARGE_SIZE
+lcol: FL_BOTTOM_BCOL
+label: 8
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: bcam8
+callback: camchange
+argument: 8
+
+--------------------
+class: FL_BUTTON
+type: FL_NORMAL_BUTTON
+box: 468 486 30 30
+boxtype: FL_FRAME_BOX
+colors: FL_BLACK FL_ALICEBLUE
+alignment: FL_ALIGN_CENTER
+style: FL_NORMAL_STYLE
+size: FL_LARGE_SIZE
+lcol: FL_BOTTOM_BCOL
+label: 9
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: bcam9
+callback: camchange
+argument: 9
+
+--------------------
+class: FL_TIMER
+type: FL_HIDDEN_TIMER
+box: 0 0 27 27
+boxtype: FL_DOWN_BOX
+colors: FL_COL1 FL_RED
+alignment: FL_ALIGN_CENTER
+style: FL_NORMAL_STYLE
+size: FL_DEFAULT_SIZE
+lcol: FL_BLACK
+label: timer
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: tim
+callback: timer_cb
+argument: 0
+
+--------------------
+class: FL_TEXT
+type: FL_NORMAL_TEXT
+box: 36 18 576 72
+boxtype: FL_FLAT_BOX
+colors: FL_BLACK FL_TOMATO
+alignment: FL_ALIGN_LEFT|FL_ALIGN_INSIDE
+style: FL_NORMAL_STYLE
+size: FL_MEDIUM_SIZE
+lcol: FL_ALICEBLUE
+label: 
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: textbox
+callback: 
+argument: 
+
+--------------------
+class: FL_BUTTON
+type: FL_NORMAL_BUTTON
+box: 513 486 30 30
+boxtype: FL_FRAME_BOX
+colors: FL_BLACK FL_ALICEBLUE
+alignment: FL_ALIGN_CENTER
+style: FL_NORMAL_STYLE
+size: FL_LARGE_SIZE
+lcol: FL_BOTTOM_BCOL
+label: 0
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: bcam10
+callback: camchange
+argument: 10
+
+--------------------
+class: FL_BUTTON
+type: FL_NORMAL_BUTTON
+box: 594 486 30 30
+boxtype: FL_FRAME_BOX
+colors: FL_BLACK FL_ALICEBLUE
+alignment: FL_ALIGN_CENTER
+style: FL_NORMAL_STYLE
+size: FL_LARGE_SIZE
+lcol: FL_BOTTOM_BCOL
+label: +
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: newviewer
+callback: newme
+argument: 10
+
+--------------------
+class: FL_BUTTON
+type: FL_NORMAL_BUTTON
+box: 18 486 30 30
+boxtype: FL_FRAME_BOX
+colors: FL_BLACK FL_ALICEBLUE
+alignment: FL_ALIGN_CENTER
+style: FL_NORMAL_STYLE
+size: FL_LARGE_SIZE
+lcol: FL_DARKCYAN
+label: S
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: btnsize
+callback: changesize
+argument: 1
+
+==============================
+create_the_forms

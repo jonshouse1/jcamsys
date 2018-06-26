@@ -1,0 +1,10 @@
+#!/bin/bash
+#C='gcc  jcamsysclient.c ../../jcamsys_common/jcamsys_network.c ../../jcamsys_common/jcamsys_protocol.c ../../jcamsys_common/jcamsys_cipher.c ../../jcamsys_common/jcamsys_common.c ../../jcamsys_common/jcamsys_settings.c -I../../jcamsys_common -lcrypto -o jcamsysclient'
+C='gcc  jcamsysclient.c ../../jcamsys_common/md5x.c ../../jcamsys_common/jcamsys_network.c ../../jcamsys_common/jcamsys_protocol.c ../../jcamsys_common/jcamsys_cipher.c ../../jcamsys_common/jcamsys_common.c ../../jcamsys_common/jcamsys_settings.c -I../../jcamsys_common -o jcamsysclient'
+echo $C
+$C
+
+# running from NFS I keep forgetiing .jcpass is a 'per machine' obfs password
+if [ -f .jcpass ]; then
+	rm .jcpass
+fi

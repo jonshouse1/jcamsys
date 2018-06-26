@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+C='gcc jcmakeserverpasswd.c ../jcamsys_common/jcamsys_cipher.c ../jcamsys_common/jcamsys_settings.c ../jcamsys_common/jcamsys_common.c -I../jcamsys_common -lcrypto -o jcmakeserverpasswd'
+echo $C
+$C
+
+
+C='gcc jcmakekey.c ../jcamsys_common/jcamsys_cipher.c ../jcamsys_common/jcamsys_settings.c ../jcamsys_common/jcamsys_common.c -I../jcamsys_common -lcrypto -o jcmakekey'
+echo $C
+$C
+
+

@@ -1,0 +1,31 @@
+#!/bin/bash
+
+ARCH=`arch`
+DEST="jcamsysserver"`arch`
+
+
+if [ ! -f id.h ]; then
+	RANDOMID=`head -16 /dev/urandom | md5sum |cut -d' ' -f1`
+	echo "#define JCID  \"$RANDOMID\" " >id.h
+	echo "made id.h"
+fi
+
+if [ -f $DEST ]; then
+	rm $DEST
+fi
+
+REL="../.."
+
+C="gcc -Wall jcamsys_server.c jcamsys_archiver.c jcamsys_sensor.c jcamsys_keyexchange.c jcamsys_httpd.c $REL/jcamsys_common/jcamsys_sensors.c $REL/jcamsys_common/jcamsys_camerasettings.c $REL/jcamsys_common/jcamsys_sharedmem.c jcamsys_yafdpd.c $REL/jcamsys_common/md5x.c $REL/jcamsys_common/jcamsys_images.c $REL/jcamsys_common/ipbar.c $REL/jcamsys_common/jcamsys_network.c $REL/jcamsys_common/jcamsys_protocol.c $REL/jcamsys_common/jcamsys_cipher.c $REL/jcamsys_common/jcamsys_server_settings.c $REL/jcamsys_common/jcamsys_common.c -I$REL/jcamsys_common -l jpeg -o $DEST"
+
+echo $C
+$C
+
+
+if [ ! -f $DEST ]; then
+	echo
+	echo
+	echo "compile failed"
+	echo	
+fi
+

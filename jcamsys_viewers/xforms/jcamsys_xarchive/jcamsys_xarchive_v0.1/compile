@@ -1,0 +1,16 @@
+#!/bin/bash
+
+ARCH=`arch`
+DEST="jcamsysxarchive"
+
+
+#debug
+DEBUG='-g -O0'
+
+REL="../../../.."
+
+#Ad in -O3 later
+C="gcc -g -O0 -Wall jcamsysxarchive.c jcamsysxarchive_form_main.c jcamsysxarchive_form_archive2.c $DEBUG $REL/jcamsys_common/jcamsys_camerasettings.c $REL/jcamsys_common/jcamsys_images.c $REL/jcamsys_common/md5x.c $REL/jcamsys_common/jcamsys_network.c $REL/jcamsys_common/jcamsys_protocol.c $REL/jcamsys_common/jcamsys_cipher.c $REL/jcamsys_common/jcamsys_common.c $REL/jcamsys_common/jcamsys_client_settings.c -I$REL/jcamsys_common -lforms -lflimage -ljpeg -o $DEST"
+echo $C
+$C
+

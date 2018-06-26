@@ -1,0 +1,28 @@
+#!/bin/bash
+
+ARCH=`arch`
+DEST="jcamsysbridge_onvif_ffmpeg"`arch`
+
+# the JCID defines who we are to the server, we want it be unique, but not unique
+# wth each new compile.
+if [ ! -f id.h ]; then
+	RANDOMID=`head -16 /dev/urandom | md5sum |cut -d' ' -f1`
+	echo "#define JCID  \"$RANDOMID\" " >id.h
+	echo "made id.h"
+fi
+
+if [ -f $DEST ]; then
+	rm $DEST
+fi
+
+
+C='gcc -Wall jcamsysbridge_onvif_ffmpeg.c ../../jcamsys_common/jcamsys_camerasettings.c ../../jcamsys_common/jcamsys_images.c ../../jcamsys_common/md5x.c ../../jcamsys_common/jcamsys_network.c ../../jcamsys_common/jcamsys_protocol.c ../../jcamsys_common/jcamsys_cipher.c ../../jcamsys_common/jcamsys_common.c ../../jcamsys_common/jcamsys_settings.c -I../../jcamsys_common -ljpeg -o '$DEST''
+echo $C
+$C
+
+echo $RANDOMID
+
+# running from NFS I keep forgetiing .jcpass is a 'per machine' obfs password
+#if [ -f .jcpass ]; then
+	#rm .jcpass
+#fi

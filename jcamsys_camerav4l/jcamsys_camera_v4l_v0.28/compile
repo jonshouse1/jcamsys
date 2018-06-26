@@ -1,0 +1,19 @@
+#!/bin/bash
+
+ARCH=`arch`
+DEST="jcamsyscamerav4l"`arch`
+
+
+REL="../.."
+
+C="gcc -Wall jcamsys_camera_v4l.c $REL/jcamsys_common/jcamsys_camerasettings.c $REL/jcamsys_common/jcamsys_images.c $REL/jcamsys_common/md5x.c $REL/jcamsys_common/jcamsys_network.c $REL/jcamsys_common/jcamsys_protocol.c $REL/jcamsys_common/jcamsys_cipher.c $REL/jcamsys_common/jcamsys_common.c $REL/jcamsys_common/jcamsys_client_settings.c -I$REL/jcamsys_common -ljpeg -o $DEST"
+
+echo $C
+$C
+
+echo $RANDOMID
+
+# running from NFS I keep forgetiing .jcpass is a 'per machine' obfs password
+#if [ -f .jcpass ]; then
+	#rm .jcpass
+#fi

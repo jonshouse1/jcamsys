@@ -1,0 +1,53 @@
+Magic: 15000
+
+Internal Form Definition File
+    (do not change)
+
+Number of forms: 1
+Unit of measure: FL_COORD_PIXEL
+SnapGrid: 9
+
+=============== FORM ===============
+Name: main
+Width: 641
+Height: 523
+Number of Objects: 2
+
+--------------------
+class: FL_BOX
+type: FL_FLAT_BOX
+box: 0 0 641 523
+boxtype: FL_FLAT_BOX
+colors: FL_BLACK FL_BLACK
+alignment: FL_ALIGN_CENTER
+style: FL_NORMAL_STYLE
+size: FL_DEFAULT_SIZE
+lcol: FL_BLACK
+label: 
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: 
+callback: 
+argument: 
+
+--------------------
+class: FL_TABFOLDER
+type: FL_TOP_TABFOLDER
+box: 0 0 621 504
+boxtype: FL_NO_BOX
+colors: FL_GREEN FL_DEEPPINK
+alignment: FL_ALIGN_LEFT_TOP
+style: FL_NORMAL_STYLE
+size: FL_DEFAULT_SIZE
+lcol: FL_AZURE
+label: 
+shortcut: 
+resize: FL_RESIZE_NONE
+gravity: FL_NoGravity FL_NoGravity
+name: tabs
+callback: tabs_cb
+argument: 0
+
+==============================
+create_the_forms
